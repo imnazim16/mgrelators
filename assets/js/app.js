@@ -217,7 +217,7 @@ document.querySelectorAll("#navbar a, .enq-form a").forEach((anchor) => {
     const targetSection = document.getElementById(targetId);
 
     window.scrollTo({
-      top: targetSection.offsetTop - 160, // adjust offset for sticky navbar
+      top: targetSection.offsetTop - 50, // adjust offset for sticky navbar
       behavior: "smooth",
     });
     document
