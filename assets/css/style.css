@@ -53,7 +53,7 @@ section {
 .section-title {
     margin-bottom: 40px;
     font-size: 2rem;
-    color: var(--dark);
+    color: #08213a;
 }
 .cnt-title{
     text-align: center;
@@ -61,20 +61,23 @@ section {
 
 /* Header Styles */
 header {
-    background-color: rgba(27, 61, 104, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0 0;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+    position: relative;
+    padding-left: 280px;
 }
 .tp-phone{
     display: flex;
@@ -82,19 +85,16 @@ header {
     align-items: flex-end;
 }
 .tp-phone span{
-    color: #fff; 
+    color: #08213a; 
     font-weight: 500;
     font-size: 0.9rem;
 }
 .tp-phone a{
-    color:#fff; 
+    color:#08213a; 
     text-decoration: none; 
 }
 .main-header nav{
     padding: 15px 0
-}
-.main-header .header-container{
-    border-bottom:rgba(255, 255, 255, 0.3) solid 1px;
 }
 .header-container.brd-0{
     border-bottom: none;
@@ -106,7 +106,10 @@ header {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--primary);
-    width: 100px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .logo img{
     display: block;
@@ -117,6 +120,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    gap: 65px;
 }
 .enq-form a{
     color:#000; 
@@ -138,15 +142,15 @@ header {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--white);
+    color: #08213a;
     font-weight: 500;
     transition: color 0.3s;
 }
 .nav-menu a.active{
-    color: var(--secondary);
+    color: #fad15e;
 }
 .nav-menu a:hover {
-    color: var(--secondary);
+    color: #fad15e;
 }
 
 .mobile-menu-btn {
@@ -155,7 +159,7 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--white);
+    color: #060615;
 }
 
 /* Hero Section */
@@ -163,7 +167,7 @@ header {
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
+    text-align: left;
     height: 95vh;
     display: flex;
     align-items: center;
@@ -186,15 +190,15 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
     line-height: 3.2rem;
+    color: #fad15e;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
+    font-size: 2.2rem;
+    color: #08213a;
 }
 
 /* Featured Properties */
@@ -301,7 +305,7 @@ header {
 .ficon{
     height: 39px;
     width: 39px;
-    background-color: #55C4F1;
+    background-color: #08213a;
     display: block;
     border-radius: 50%;
     padding: 7px;
@@ -325,7 +329,7 @@ header {
 
 }
 .sub-title i{
-    color: var(--secondary);
+    color: #fad15e;
 }
 /* Services Section */
 .services-grid {
@@ -517,14 +521,16 @@ footer {
 
 .footer-flex{
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 .contact-info{
     width: 40%;
 }
 .contact-form{
     width: 58.2%;
-    padding-top: 60px;
+}
+#contactForm{
+    padding-top: 35px;
 }
 .input-box{
     margin-bottom: 25px;
@@ -560,6 +566,7 @@ footer {
     display: flex;
     gap: 20px;
     flex-direction: column;
+    padding-top: 54px;
 }
 .contact-info .sub-title{
     margin-bottom: 20px;
@@ -603,7 +610,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #55C4F1;
+    color: #08213a;
 }
 .ft-box a{
     color: #2C2C2C;
@@ -666,6 +673,9 @@ input:focus, textarea:focus {
   color: #999;
   background-color: #4D4D4D;
 }
+.mb-logo{
+    display: none;
+}
 
 /* Responsive Styles */
 @media (max-width: 1199px){
@@ -674,7 +684,10 @@ input:focus, textarea:focus {
     }
     .card.card-wid-50{
         max-width: 47.6%;
-    }    
+    }
+    .header-container{
+        padding-left: 220px;
+    }
 }
 @media (max-width: 979px){
     .card{
@@ -695,6 +708,18 @@ input:focus, textarea:focus {
     }
     .why-chooseus-section .container{
         flex-direction: column;
+    }
+    .header-container{
+        padding-left: 124px;
+    }
+    .nav-menu{
+        gap: 20px;
+    }
+    .nav-container{
+        gap: 0;
+    }
+    .logo{
+        width: 110px;
     }
 }
 @media (max-width: 768px) {
@@ -732,27 +757,38 @@ input:focus, textarea:focus {
         display: none;
     }
     .logo{
-        width: 150px
+        width: 110px
     }
     .logo img{width: 100%;}
     .enq-form{display: none;}
-    .main-header .header-container{border-bottom: 0;}
     .nav-container{display: none;}
+    header{height: 50px}
+    .header-container{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 9px;
+    }
     .mobile-menu-open{
         position: fixed;
         top: 0;
         right: 0;
         width: 300px;
-        height: 100%;
-        background-color: rgba(27, 61, 104, 0.98);
+        height: 100vh;
+        background-color: rgba(27, 61, 104, 0.9);
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
         padding: 75px 40px 0;
         display: block;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+    .fa-xmark{
+        color: #fff;
     }
     .nav-menu{
         flex-direction: column;
         gap: 0;
     }
+    .nav-menu a{color: #fff}
     .hero{
         height: 340px;
         padding: 60px 0 30px;
@@ -774,7 +810,7 @@ input:focus, textarea:focus {
         max-width: 100%;
     }
     .card {
-        max-width: 48%;
+        max-width: 47.7% !important;
     }
     .footer-flex{
         flex-direction: column;
@@ -808,5 +844,30 @@ input:focus, textarea:focus {
     .about-card > div{
         flex-direction: column;
         align-items: flex-start;
+    }
+    .mb-logo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .mb-logo .partner-logo{
+        max-width: 47%;
+        height: 96px;
+    }
+    .contact-info{
+        padding-top: 0;
+    }
+}
+@media (max-width: 479px){
+    .card {
+        max-width: 100% !important;
+    }
+    .mb-logo .partner-logo{
+        max-width: 46.68%;
+        height: 96px;
+    }
+    .mb-logo .partner-logo img{
+        width: 100%;
     }
 }
