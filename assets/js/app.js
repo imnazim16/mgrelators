@@ -32,18 +32,6 @@ function animateCounters() {
   });
 }
 
-// Trigger when section is visible
-window.addEventListener("scroll", () => {
-  const section = document.querySelector(".stats-section");
-  const sectionTop = section.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (!started && sectionTop < windowHeight - 100) {
-    animateCounters();
-    started = true;
-  }
-});
-
 document.getElementById("year").textContent = new Date().getFullYear();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".property-card");
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   const itemsPerPage = 6;
-  let currentCategory = "commercials";
+  let currentCategory = "newlaunch";
   let currentCount = itemsPerPage;
 
   // Function to filter cards
@@ -109,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadMoreBtn.addEventListener("click", loadMore);
 
   // Init with "all"
-  filterCards("commercials");
+  filterCards("newlaunch");
 });
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
