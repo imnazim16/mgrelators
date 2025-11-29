@@ -222,7 +222,7 @@ header {
 }
 .filter-tabs a:hover, .filter-tabs a.active{
     background-color: var(--primary);
-    color:#fff;
+    color:#fad15e;
     border: 1px solid var(--primary);
     transition: all 0.3s;
 }
