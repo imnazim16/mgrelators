@@ -868,7 +868,7 @@ input:focus, textarea:focus {
     .hero p, .hero h1{
         font-size: 1.2rem;
     }
-    .hero h1{margin-bottom: 0;}
+    .hero h1{margin-bottom: 0; line-height: 2rem;}
 }
 @media (max-width: 479px){
     .card {
