@@ -860,7 +860,8 @@ input:focus, textarea:focus {
         padding-top: 0;
     }
     .hero{
-        background-position: 90% 80%;
+        background-position: 68% 0;
+        background-size: 320%;
     }
     .hero .container{
         padding-top: 95px;
