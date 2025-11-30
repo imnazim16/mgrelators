@@ -859,11 +859,14 @@ input:focus, textarea:focus {
     .contact-info{
         padding-top: 0;
     }
+    .hero{
+        background-position: 90% 80%;
+    }
     .hero .container{
         padding-top: 88px;
     }
     .hero p, .hero h1{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .hero h1{margin-bottom: 0;}
 }
