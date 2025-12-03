@@ -268,9 +268,16 @@ header {
 .short-details {
     color: var(--gray);
     margin-bottom: 15px;
-    display: flex;
     font-size: 0.95rem;
-    gap: 20px
+}
+.short-details div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.short-details div span:first-child::after{
+    content: "|";
+    margin-left: 8px;
 }
 .download-links{
     display: flex;
@@ -330,6 +337,20 @@ header {
 }
 .sub-title i{
     color: #fad15e;
+}
+.sm-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.about-section .sm-box p{
+    padding-bottom: 15px;
+}
+.about-section .sm-box ul{
+    margin-bottom: 15px;
+    list-style-position: inside;
+}
+.about-section .sm-box ul li{
+    padding-bottom: 10px;
 }
 /* Services Section */
 .services-grid {
@@ -579,6 +600,10 @@ footer {
     font-size: 2rem;
     color:#2C2C2C;
     font-weight: 700;
+}
+.call-txt a{
+    text-decoration: none;
+    color:#2C2C2C;
 }
 .social{
     padding-top: 20px;
