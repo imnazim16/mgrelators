@@ -291,7 +291,7 @@ header {
     font-size: 0.95rem;
 }
 .download-links a{
-    color:#4D4D4D;
+    color:#08213a;
     font-size: 1.2rem;
 }
 /* About Section */
@@ -348,9 +348,6 @@ header {
 .about-section .sm-box ul{
     margin-bottom: 15px;
     list-style-position: inside;
-}
-.about-section .sm-box ul li{
-    padding-bottom: 10px;
 }
 /* Services Section */
 .services-grid {
@@ -557,7 +554,7 @@ footer {
     margin-bottom: 25px;
 }
 .input-box input{
-    border:0;
+    border: 1px solid #ddd;
     background-color: #fff;
     padding: 0 20px;
     height: 50px;
@@ -565,7 +562,7 @@ footer {
     width: 100%;
 }
 .input-box textarea{
-    border: 0;
+    border: 1px solid #ddd;
     background-color: #fff;
     padding: 20px;
     height: 150px;
@@ -575,7 +572,7 @@ footer {
 .submit-btn button{
     display: block;
     border: 0;
-    background-color: #1B3D68;
+    background-color: #08213a;
     color:#fff;
     border-radius: 6px;
     height: 45px;
